@@ -7,7 +7,14 @@ import javafx.beans.property.Property;
 import javafx.beans.property.SimpleBooleanProperty;
 import javafx.scene.Node;
 
-
+/**
+ * To create Tic Tac Toe game which player can put x,o,and x respectively.
+ * When user pit x or o all in the same line or diagonal then player x or o will win.
+ * Otherwise, they can draw.
+ *
+ * @author jim
+ *
+ */
 public class TicTacToeGame {
 	private final int boardsize;
 	/** View of the TicTacToe board. */
@@ -20,7 +27,7 @@ public class TicTacToeGame {
 	private Player nextPlayer = Player.X;
 
     /**
-     *
+     * Announce the parameters.
      * @param size
      */
 	public TicTacToeGame(int size) {
