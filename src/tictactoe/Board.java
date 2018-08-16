@@ -9,7 +9,7 @@ import javafx.scene.paint.Color;
  * This class provides a view of the board.
  *
  * @author jim
- * 
+ *
  */
 public class Board extends GridPane  {
 	/** Size of squares on the board. */
@@ -21,6 +21,8 @@ public class Board extends GridPane  {
 
 	/**
 	 * Create an empty tic tac toe board.
+     * @param cols board columns.
+     * @param rows board rows
 	 * @return empty board object
 	 */
 	public Board(int rows, int cols) {

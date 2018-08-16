@@ -18,7 +18,11 @@ public class TicTacToeGame {
 	private SimpleBooleanProperty gameOver;
 	
 	private Player nextPlayer = Player.X;
-	
+
+    /**
+     *
+     * @param size
+     */
 	public TicTacToeGame(int size) {
 		this.boardsize = size;
 		board = new Board(boardsize,boardsize);   // view of the gameboard
@@ -26,15 +30,16 @@ public class TicTacToeGame {
 		gameOver = new SimpleBooleanProperty(false);
 		startNewGame();
 	}
-	
+
+
 	public Board getBoard() {
 		return board;
 	}
-	
+
 	public void startNewGame() {
 		// Avoid nulls. Assign a "none" object to each location on the board.
-		for(int row=0; row<3; row++) 
-			for(int col=0; col<3; col++) pieces[row][col] = Piece.NONE;
+		for(int row=0; row<3; row++)
+			for(int col=0; col<4; col++) pieces[row][col] = Piece.NONE;
 		// Remove Pieces from the board (view), but not the squares themselves. Use a Predicate to test for Piece.
 		Predicate<Node> isPiece = (node) -> node instanceof Piece;
 		board.getChildren().removeIf(isPiece);
@@ -43,6 +48,9 @@ public class TicTacToeGame {
 	
 	/**
 	 * Test whether a player can move to a square.
+     * @param player who's playing.
+     * @param col board column.
+     * @param row board row.
 	 * @return true if can move to the requested (col,row) on board.
 	 */
 	public boolean canMoveTo(Player player, int col, int row) {
