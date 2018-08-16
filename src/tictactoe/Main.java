@@ -45,9 +45,6 @@ public class Main extends Application {
 	        primaryStage.show();
 		} catch (Exception ex) {
 			Logger.getLogger("Main").log(Level.SEVERE, "Exception initializing game: \n"+ex.getMessage(), ex);
-			// Does Logger.log() print the stacktrace?  If so, we don't need this:
-			ex.printStackTrace();
-			
 			return;
 		}
 	}
