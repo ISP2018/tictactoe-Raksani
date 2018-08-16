@@ -7,6 +7,9 @@ import javafx.scene.paint.Color;
 /**
  * A TicTacToe board.
  * This class provides a view of the board.
+ *
+ * @author jim
+ * 
  */
 public class Board extends GridPane  {
 	/** Size of squares on the board. */
