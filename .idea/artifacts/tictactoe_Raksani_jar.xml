@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="tictactoe-Raksani:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/tictactoe_Raksani_jar</output-path>
+    <root id="archive" name="tictactoe-Raksani.jar">
+      <element id="module-output" name="tictactoe-Raksani" />
+    </root>
+  </artifact>
+</component>
