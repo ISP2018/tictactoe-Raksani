@@ -86,7 +86,7 @@
             </classpath>
             <!-- What classes contain JUnit tests? -->
             <batchtest>
-                <fileset dir="${test.build.dir}t" includes="**/*Test.class" />
+                <fileset dir="${test.build.dir}" includes="**/*Test.class" />
             </batchtest>
         </junit>
     </target>
